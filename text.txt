@@ -1,0 +1,1 @@
+An example paragraph for the testing of Flesch-Kincaid readability and reading level tests.`
