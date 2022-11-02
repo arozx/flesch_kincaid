@@ -1,4 +1,5 @@
 import hyphenate
+
 num_words = 0
 num_lines = 0
 text = r'text.txt'
@@ -19,11 +20,6 @@ while line:
     line = oFile.readline()[:-1]
     num_lines+=1
 oFile.close()
-
-
-# OUTPUT
-print(f'number of words: {num_words}'+f'\n number of lines: {num_lines}')
-
 
 words = []
 
