@@ -1,11 +1,23 @@
 import hyphenate
+import sys
+
+# Get arguments
+program_args = sys.argv[1::]
+if len(program_args) > 0:
+    if program_args[0] == "-h" or program_args == "--help":
+        print("When used with no arguments the program runs with 'test.txt'")
+        print("When an argument is passed the program runs on that file")
+        sys.exit()
+    filename = str(program_args[0])
+else:
+    # default to filename "text.txt"
+    filename = "test.txt"
 
 num_words = 0
 num_lines = 0
-text = r'text.txt'
 
 # Opening & save contents
-oFile = open(text,'r')
+oFile = open(filename,'r')
 data = oFile.read()
 
 # Splitting the data into separate lines
@@ -14,7 +26,7 @@ num_words+=len(lines)
 oFile.close()
 
 # calculating num_lines
-oFile = open(text,'r')
+oFile = open(filename,'r')
 line = oFile.readline()[:-1]
 while line:
     line = oFile.readline()[:-1]
@@ -24,9 +36,9 @@ oFile.close()
 words = []
 
 # adding all words to an array
-with open(text,'r') as file:
-    for line in file:   
-        for word in line.split():       
+with open(filename,'r') as file:
+    for line in file:
+        for word in line.split():
             words.append(word)
 
 # calculate number of sylables
