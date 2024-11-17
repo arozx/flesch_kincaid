@@ -11,7 +11,7 @@ if len(program_args) > 0:
     filename = str(program_args[0])
 else:
     # default to filename "text.txt"
-    filename = "test.txt"
+    filename = "text.txt"
 
 num_words = 0
 num_lines = 0
